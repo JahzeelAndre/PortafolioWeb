@@ -1,0 +1,33 @@
+<nav>
+  <div class="">
+    <fa-icon [ngClass]="isHidden ? 'show-bars-icon' : 'hide-bars-icon'" [icon]="barsIcon"></fa-icon>
+  </div>
+  <div [ngClass]="isHidden ? 'is-hidden' : ''">
+    <ul class="nav-menu">
+      <li class="nav-items">
+        <a [routerLink]="'perfil'" class="nav-items-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span>Perfil</span>
+          <fa-icon [icon]="profileIcon"></fa-icon>
+        </a>
+      </li>
+      <li class="nav-items">
+        <a [routerLink]="'estudios'" class="nav-items-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span>Estudios</span>
+          <fa-icon [icon]="studiesIcon"></fa-icon>
+        </a>
+      </li>
+      <li class="nav-items">
+        <a [routerLink]="'trabajos'" class="nav-items-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span>Trabajos</span>
+          <fa-icon [icon]="worksIcon"></fa-icon>
+        </a>
+      </li>
+      <li class="nav-items">
+        <a [routerLink]="'contacto'" class="nav-items-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span>Contactame</span>
+          <fa-icon [icon]="contactIcon"></fa-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

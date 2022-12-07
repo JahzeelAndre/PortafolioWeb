@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jahzandre-e6e51": {
+      "hosting": {
+        "PortafolioWeb": [
+          "jahzandre-e6e51"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jahzandre-e6e51"
+  }
+}

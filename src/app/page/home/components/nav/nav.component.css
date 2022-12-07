@@ -1,0 +1,47 @@
+.show-bars-icon {
+  font-size: 1.50rem;
+  border: 2px solid black;
+  padding-inline: 0.4rem;
+  padding-block: 0.1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.show-bars-icon:hover {
+  background-color: aliceblue;
+}
+
+.hide-bars-icon {
+  display: none;
+}
+
+.nav-menu {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+  background-color: #EDDFDF;
+}
+
+.nav-items {
+  margin: 0.5rem;
+}
+
+.nav-items-link {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.nav-items-link span {
+  padding-right: 0.5rem;
+}
+
+.active {
+  background-color: #cfcccc;
+  color: blue;
+}
