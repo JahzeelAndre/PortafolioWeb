@@ -1,9 +1,8 @@
-<nav>
-  <div class="">
-    <fa-icon [ngClass]="isHidden ? 'show-bars-icon' : 'hide-bars-icon'" [icon]="barsIcon"></fa-icon>
-  </div>
-  <div [ngClass]="isHidden ? 'is-hidden' : ''">
-    <ul class="nav-menu">
+<nav class="nav-bar">
+  <fa-icon (click)="showNav()" [ngClass]="isHidden ? 'show-bars-icon' : !isHidden && screenWidth <= 768 ? 'show-bars-icon' : 'hide-bars-icon'" [icon]="barsIcon"></fa-icon>
+
+  <div >
+    <ul [ngClass]="isHidden ? 'is-hidden' : !isHidden && screenWidth <= 768 ? 'nav-medium-screen' : 'nav-full-screen' ">
       <li class="nav-items">
         <a [routerLink]="'perfil'" class="nav-items-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <span>Perfil</span>

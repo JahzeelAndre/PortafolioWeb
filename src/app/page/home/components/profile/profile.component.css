@@ -1,0 +1,25 @@
+.body {
+  display: flex;
+}
+
+.body-medium-screen {
+  flex-direction: column;
+}
+
+.body-full-screen {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.about-full-screen {
+  text-align: justify;
+  width: 50%;
+}
+
+.about-md-screen {
+  text-align: justify;
+}
+
+.article-list {
+  text-align: justify;
+}

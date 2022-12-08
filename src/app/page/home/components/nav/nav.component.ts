@@ -18,22 +18,24 @@ export class NavComponent {
 
   ngOnInit(){
     this.screenWidth = window.innerWidth;
-    if(this.screenWidth < 768){
+    if(this.screenWidth <= 768){
       this.isHidden = true;
     }else {
       this.isHidden = false;
     }
   }
 
-  /* @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize', ['$event'])
   onResize(event:any) {
+    this.screenWidth = window.innerWidth;
     if(this.screenWidth > 768){
-      this._sNavCollapsed.isHidden = false;
-      this._sNavCollapsed.screenWidth = this.screenWidth;
+      this.isHidden = false;
     }else if(this.screenWidth <= 768 && this.screenWidth > 0) {
-      this._sNavCollapsed.collapsed = false;
-      this._sNavCollapsed.screenWidth = this.screenWidth;
-      this._sNavCollapsed.isHidden = true;
+      this.isHidden = true;
     }
-  } */
+  }
+
+  showNav() {
+    this.isHidden = !this.isHidden;
+  }
 }

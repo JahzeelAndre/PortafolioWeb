@@ -1,9 +1,20 @@
+.nav-bar {
+  background-color: #EDDFDF;
+  width: 80vw;
+  padding-block: 7px;
+  border-radius: 0px 0px 10px 10px;
+  margin: auto;
+  margin-bottom: 30px;
+  box-shadow: 0px 10px 20px black;
+}
+
 .show-bars-icon {
   font-size: 1.50rem;
-  border: 2px solid black;
+  border: 1px solid black;
   padding-inline: 0.4rem;
   padding-block: 0.1rem;
   border-radius: 0.3rem;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
 
@@ -15,11 +26,24 @@
   display: none;
 }
 
-.nav-menu {
-  width: 100vw;
+.is-hidden {
+  display: none;
+}
+
+.nav-full-screen {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  list-style: none;
+  background-color: #EDDFDF;
+}
+
+.nav-medium-screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   list-style: none;
   background-color: #EDDFDF;
 }
