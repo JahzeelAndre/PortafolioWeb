@@ -8,12 +8,7 @@ import { FFirestoreService } from '../../services/f-firestore.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  public profileDataObj: ProfileDataInterface = {
-    about: '',
-    aptitudes: [],
-    attitudes: [],
-    skills: [],
-  }
+  public profileDataObj?: ProfileDataInterface;
   public screenWidth: number = 0;
   constructor(private _fFirestoreService: FFirestoreService){
 

@@ -1,0 +1,10 @@
+.information-list-item {
+    flex-direction: column;
+    text-align: justify;
+}
+
+.fields-name {
+    padding-right: 10px;
+    color: blue;
+    width: fit-content;
+}

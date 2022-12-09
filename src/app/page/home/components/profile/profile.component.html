@@ -1,15 +1,15 @@
 <div class="body" [ngClass]="screenWidth <= 768 ? 'body-medium-screen': 'body-full-screen'">
   <article [ngClass]="screenWidth <= 768 ? 'about-md-screen' : 'about-full-screen'">
-    <h4>Resumen</h4>
+    <h4 class="articles-titles">Resumen</h4>
     <span>
-      {{profileDataObj.about}}
+      {{profileDataObj?.about}}
     </span>
   </article>
   <hr>
   <article class="">
     <ul class="article-list">
-      <h4>Habilidades</h4>
-      <li *ngFor="let skillItem of profileDataObj.skills">
+      <h4 class="articles-titles">Habilidades</h4>
+      <li *ngFor="let skillItem of profileDataObj?.skills">
         <span>
           {{skillItem}}
         </span>
@@ -19,8 +19,8 @@
   <hr>
   <article class="">
     <ul class="article-list">
-      <h4>Actitudes</h4>
-      <li *ngFor="let attitudesItem of profileDataObj.attitudes">
+      <h4 class="articles-titles">Actitudes</h4>
+      <li *ngFor="let attitudesItem of profileDataObj?.attitudes">
         <span>
           {{attitudesItem}}
         </span>
@@ -30,8 +30,8 @@
   <hr>
   <article class="">
     <ul class="article-list">
-      <h4>Aptitudes</h4>
-      <li *ngFor="let aptitudesItem of profileDataObj.aptitudes">
+      <h4 class="articles-titles">Aptitudes</h4>
+      <li *ngFor="let aptitudesItem of profileDataObj?.aptitudes">
         <span>
           {{aptitudesItem}}
         </span>

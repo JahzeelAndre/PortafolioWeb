@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { BodyComponent } from './components/body/body.component';
@@ -25,6 +26,7 @@ import { StudiesComponent } from './components/studies/studies.component';
     CommonModule,
     HomeRoutingModule,
     FontAwesomeModule,
+    QRCodeModule,
   ]
 })
 export class HomeModule { }

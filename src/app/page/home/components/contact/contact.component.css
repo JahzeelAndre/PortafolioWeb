@@ -1,0 +1,49 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+.contact-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list-items-links {
+    margin: 18px;
+}
+.text-link {
+    margin-left: 8px;
+}
+.links-social-web {
+    font-size: 1.3rem;
+}
+.links-md-screen {
+    width: 100px;
+}
+.link-whatsapp {
+    color: rgb(32, 207, 32);
+}
+.link-github {
+    color: black;
+}
+.link-email {
+    color: brown;
+}
+.qr-facebook-icon {
+    font-size: 2.5rem;
+    color: blue;
+}
+.qr-whatsapp-icon {
+    font-size: 2.5rem;
+    color: green;
+}
+.qr-github-icon {
+    font-size: 2.5rem;
+    color: black;
+}
+.qr-google-icon {
+    font-size: 2.5rem;
+    color: brown;
+}

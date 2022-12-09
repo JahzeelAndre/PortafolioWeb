@@ -1,1 +1,55 @@
-<p>contact works!</p>
+<div class="body">
+    <h2  class="title">Redes Sociales</h2>
+    <ul class="contact-list">
+        <li class="list-items-links">
+            <a class="d-flex align-items-center links-social-web link-facebook" [ngClass]="screenWidth <= 768 ? 'w-50' : ''" [href]="contactDataObj?.facebook" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+                <span class="text-link">
+                    {{contactDataObj?.facebook}}
+                </span>
+            </a>
+        </li>
+        <li class="list-items-links">
+            <a class="d-flex align-items-center links-social-web link-whatsapp" [ngClass]="screenWidth <= 768 ? 'w-50' : ''" href="https://wa.me/qr/7GORV54VVJ6CO1" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="text-link">
+                    {{contactDataObj?.whatsapp}}
+                </span>
+            </a>
+        </li>
+        <li class="list-items-links">
+            <a class="d-flex align-items-center links-social-web link-github" [ngClass]="screenWidth <= 768 ? 'w-50' : ''" [href]="contactDataObj?.github" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <span class="text-link">
+                    {{contactDataObj?.github}}
+                </span>
+            </a>
+        </li>
+        <li class="list-items-links">
+            <a class="d-flex align-items-center links-social-web link-email" [ngClass]="screenWidth <= 768 ? 'w-50' : ''" href="">
+                <i class="fa-brands fa-google-plus"></i>
+                <span class="text-link">
+                    {{contactDataObj?.correo}}
+                </span>
+            </a>
+        </li>
+    </ul>
+    <div [ngClass]="screenWidth <= 768 ? 'd-flex flex-column align-items-center' : 'd-flex justify-content-around'">
+        <div class="d-flex flex-column">
+            <i class="fa-brands fa-facebook qr-facebook-icon"></i>
+            <qrcode [qrdata]="contactDataObj!.facebook" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+        <div class="d-flex flex-column">
+            <i class="fa-brands fa-whatsapp qr-whatsapp-icon"></i>
+            <qrcode qrdata="https://wa.me/qr/7GORV54VVJ6CO1" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+        <div class="d-flex flex-column">
+            <i class="fa-brands fa-github qr-github-icon"></i>
+            <qrcode [qrdata]="contactDataObj!.github" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+        <div class="d-flex flex-column">
+            <i class="fa-brands fa-google-plus qr-google-icon"></i>
+            <qrcode [qrdata]="contactDataObj!.correo" [width]="150" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+    </div>
+</div>
