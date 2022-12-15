@@ -1,5 +1,5 @@
 import { FFirestoreService } from './../../services/f-firestore.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { StudiesDataInterface } from '../../interfaces/studies-data-interface';
 
 @Component({
@@ -9,6 +9,7 @@ import { StudiesDataInterface } from '../../interfaces/studies-data-interface';
 })
 export class StudiesComponent {
   public studiesDataObj?: StudiesDataInterface;
+  public screenWidth: number = 0;
   constructor(private _fFirestoreService: FFirestoreService){
 
   }
@@ -16,6 +17,12 @@ export class StudiesComponent {
   ngOnInit(){
     this._fFirestoreService.getStudiesData().subscribe(
       (dataObj) => this.studiesDataObj = dataObj,
-    )
+    );
+    this.screenWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.screenWidth = window.innerWidth;
   }
 }

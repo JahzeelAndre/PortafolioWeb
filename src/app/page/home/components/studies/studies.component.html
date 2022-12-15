@@ -21,4 +21,72 @@
                 <p>{{studiesDataObj?.university?.career}}</p>
             </li>
         </ul>
+
+        <section class="border border-success border-2 rounded p-3">
+          <h3 class="text-center text-danger">Lenguajes de programación</h3>
+          <div [ngClass]="screenWidth <= 768 ? 'd-flex flex-column align-items-center': 'lenguages-sections-grid'">
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">Desarrollo Web</h5>
+              <ul>
+                <li *ngFor="let lenguage of studiesDataObj?.lenguages?.web">
+                  {{lenguage}}
+                </li>
+              </ul>
+            </article>
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">Desarrollo Móvil</h5>
+              <ul>
+                <li *ngFor="let lenguage of studiesDataObj?.lenguages?.mobile">
+                  {{lenguage}}
+                </li>
+              </ul>
+            </article>
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">Aplicaciones de Escritorio</h5>
+              <ul>
+                <li *ngFor="let lenguage of studiesDataObj?.lenguages?.desktop">
+                  {{lenguage}}
+                </li>
+              </ul>
+            </article>
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">Bases de Datos</h5>
+              <ul>
+                <li *ngFor="let lenguage of studiesDataObj?.lenguages?.database">
+                  {{lenguage}}
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="border border-success border-2 rounded p-3">
+          <h3 class="text-center text-danger">Frameworks</h3>
+          <div [ngClass]="screenWidth <= 768 ? 'd-flex flex-column align-items-center': 'lenguages-sections-grid'">
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">TypeScript</h5>
+              <ul>
+                <li *ngFor="let framework of studiesDataObj?.frameworks?.typescript">
+                  {{framework}}
+                </li>
+              </ul>
+            </article>
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">Dart</h5>
+              <ul>
+                <li *ngFor="let framework of studiesDataObj?.frameworks?.dart">
+                  {{framework}}
+                </li>
+              </ul>
+            </article>
+            <article [ngClass]="screenWidth <= 768 ? 'w-50' : ''">
+              <h5 class="text-primary text-justify">Aplicaciones de Escritorio</h5>
+              <ul>
+                <li *ngFor="let framework of studiesDataObj?.frameworks?.java">
+                  {{framework}}
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
 </div>

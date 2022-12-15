@@ -8,3 +8,10 @@
     color: blue;
     width: fit-content;
 }
+
+.lenguages-sections-grid {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 30%);
+
+}
